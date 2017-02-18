@@ -16,5 +16,5 @@ interface StateAwareInterface
      *
      * @return string|int A string or integer that uniquely identifies the current state.
      */
-    public function getCurrentState();
+    public function getState();
 }
