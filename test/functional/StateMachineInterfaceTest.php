@@ -31,6 +31,7 @@ class StateMachineInterfaceTest extends TestCase
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
             ->getState()
             ->transition()
+            ->getCurrentTransitions()
             ->new();
 
         return $mock;
