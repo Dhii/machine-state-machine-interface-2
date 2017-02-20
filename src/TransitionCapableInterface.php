@@ -14,9 +14,9 @@ interface TransitionCapableInterface
      *
      * @since [*next-version*]
      *
-     * @param string $name A string representing the transition name.
+     * @param TransitionInterface $transition The transition to apply.
      *
      * @return bool True if the transition was successful, false if not.
      */
-    public function transition($name);
+    public function transition(TransitionInterface $transition);
 }
