@@ -14,7 +14,7 @@ interface StateAwareInterface
      *
      * @since [*next-version*]
      *
-     * @return string|int A string or integer that uniquely identifies the current state.
+     * @return StateInterface The current state.
      */
     public function getState();
 }
