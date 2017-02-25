@@ -16,7 +16,7 @@ interface StateTransitionCheckCapableInterface
      *
      * @since [*next-version*]
      *
-     * @param ValueAwareInterface $state The state to check if transition is possible.
+     * @param ValueAwareInterface $state The state to check if transition is possible to.
      *
      * @return bool True if the transition is possible, false if not.
      */
