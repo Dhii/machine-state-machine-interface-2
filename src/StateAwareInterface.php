@@ -2,7 +2,7 @@
 
 namespace Dhii\Machine;
 
-use \Dhii\Data\ValueAwareInterface;
+use Dhii\Data\ValueAwareInterface;
 
 /**
  * Something which at any point in time can have a state.
