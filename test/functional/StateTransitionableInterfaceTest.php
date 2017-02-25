@@ -2,6 +2,7 @@
 
 namespace Dhii\Machine\FuncTest;
 
+use Dhii\Machine\StateTransitionableInterface;
 use Xpmock\TestCase;
 
 /**
@@ -23,7 +24,7 @@ class StateTransitionableInterfaceTest extends TestCase
      *
      * @since [*next-version*]
      *
-     * @return Dhii\Machine\StateTransitionableInterface
+     * @return StateTransitionableInterface
      */
     public function createInstance()
     {
