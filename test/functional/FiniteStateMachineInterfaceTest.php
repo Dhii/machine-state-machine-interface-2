@@ -48,5 +48,17 @@ class FiniteStateMachineInterfaceTest extends TestCase
         $this->assertInstanceOf(
             static::TEST_SUBJECT_CLASSNAME, $subject, 'Subject is not a valid instance.'
         );
+        $this->assertInstanceOf(
+            'Dhii\\Machine\\StateMachineInterface',
+            $subject, 'Subject is not a valid StateMachineInterface instance.'
+        );
+        $this->assertInstanceOf(
+            'Dhii\\Machine\\CurrentStateAwareInterface',
+            $subject, 'Subject is not a valid CurrentStateAwareInterface instance.'
+        );
+        $this->assertInstanceOf(
+            'Dhii\\Machine\\StatesAwareInterface',
+            $subject, 'Subject is not a valid StatesAwareInterface instance.'
+        );
     }
 }

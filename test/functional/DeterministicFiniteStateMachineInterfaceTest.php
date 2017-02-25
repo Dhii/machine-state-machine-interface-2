@@ -55,8 +55,24 @@ class DeterministicFiniteStateMachineInterfaceTest extends TestCase
             $subject, 'Subject is not a valid FiniteStateMachineInterface instance.'
         );
         $this->assertInstanceOf(
+            'Dhii\\Machine\\TransitionsAwareInterface',
+            $subject, 'Subject is not a valid TransitionsAwareInterface instance.'
+        );
+        $this->assertInstanceOf(
             'Dhii\\Machine\\PossibleTransitionsAwareInterface',
             $subject, 'Subject is not a valid PossibleTransitionsAwareInterface instance.'
+        );
+        $this->assertInstanceOf(
+            'Dhii\\Machine\\StateMachineInterface',
+            $subject, 'Subject is not a valid StateMachineInterface instance.'
+        );
+        $this->assertInstanceOf(
+            'Dhii\\Machine\\CurrentStateAwareInterface',
+            $subject, 'Subject is not a valid CurrentStateAwareInterface instance.'
+        );
+        $this->assertInstanceOf(
+            'Dhii\\Machine\\StatesAwareInterface',
+            $subject, 'Subject is not a valid StatesAwareInterface instance.'
         );
     }
 }
