@@ -3,7 +3,7 @@
 namespace Dhii\Machine;
 
 /**
- * Something which at any point in time is in a particular state.
+ * Something that has a current state.
  *
  * @since [*next-version*]
  */
