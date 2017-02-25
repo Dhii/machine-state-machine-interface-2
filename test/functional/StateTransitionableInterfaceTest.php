@@ -50,11 +50,11 @@ class StateTransitionableInterfaceTest extends TestCase
         );
         $this->assertInstanceOf(
             'Dhii\\Machine\\StateTransitionCheckCapableInterface',
-            $subject, 'Subject is not a valid instance.'
+            $subject, 'Subject is not a valid StateTransitionCheckCapableInterface instance.'
         );
         $this->assertInstanceOf(
             'Dhii\\Machine\\StateTransitionCapableInterface',
-            $subject, 'Subject is not a valid instance.'
+            $subject, 'Subject is not a valid StateTransitionCapableInterface instance.'
         );
     }
 }
