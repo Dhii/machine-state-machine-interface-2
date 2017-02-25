@@ -2,6 +2,8 @@
 
 namespace Dhii\Machine;
 
+use \Dhii\Data\ValueAwareInterface;
+
 /**
  * Something that can transition from one state to another.
  *
@@ -14,9 +16,9 @@ interface TransitionCapableInterface
      *
      * @since [*next-version*]
      *
-     * @param TransitionInterface $transition The transition to apply.
+     * @param ValueAwareInterface $transition The transition to apply.
      *
      * @return bool True if the transition was successful, false if not.
      */
-    public function transition(TransitionInterface $transition);
+    public function transition(ValueAwareInterface $transition);
 }
