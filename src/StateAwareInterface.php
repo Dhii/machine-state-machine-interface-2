@@ -2,6 +2,8 @@
 
 namespace Dhii\Machine;
 
+use \Dhii\Data\ValueAwareInterface;
+
 /**
  * Something which at any point in time can have a state.
  *
@@ -14,7 +16,7 @@ interface StateAwareInterface
      *
      * @since [*next-version*]
      *
-     * @return StateInterface The current state.
+     * @return ValueAwareInterface The current state.
      */
     public function getState();
 }
