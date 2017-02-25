@@ -18,7 +18,7 @@ interface TransitionCapableInterface
      *
      * @param ValueAwareInterface $transition The transition to apply.
      *
-     * @return bool True if the transition was successful, false if not.
+     * @throws TransitionExceptionInterface If the transition failed.
      */
     public function transition(ValueAwareInterface $transition);
 }
