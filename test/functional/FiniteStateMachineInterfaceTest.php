@@ -2,34 +2,35 @@
 
 namespace Dhii\Machine\FuncTest;
 
-use \Dhii\Machine\StateMachineInterface;
-use \Xpmock\TestCase;
+use Dhii\Machine\FiniteStateMachineInterface;
+use Xpmock\TestCase;
 
 /**
- * Tests {@see Dhii\Machine\StateMachineInterface}.
+ * Tests {@see Dhii\Machine\FiniteStateMachineInterface}.
  *
  * @since [*next-version*]
  */
-class StateMachineInterfaceTest extends TestCase
+class FiniteStateMachineInterfaceTest extends TestCase
 {
     /**
      * The name of the test subject.
      *
      * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'Dhii\\Machine\\StateMachineInterface';
+    const TEST_SUBJECT_CLASSNAME = 'Dhii\\Machine\\FiniteStateMachineInterface';
 
     /**
      * Creates a new instance of the test subject.
      *
      * @since [*next-version*]
      *
-     * @return StateMachineInterface
+     * @return FiniteStateMachineInterface
      */
     public function createInstance()
     {
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
             ->getCurrentState()
+            ->getStates()
             ->new();
 
         return $mock;
@@ -48,7 +49,16 @@ class StateMachineInterfaceTest extends TestCase
             static::TEST_SUBJECT_CLASSNAME, $subject, 'Subject is not a valid instance.'
         );
         $this->assertInstanceOf(
-            'Dhii\\Machine\\CurrentStateAwareInterface', $subject, 'Subject is not a valid StateAwareInterface instance.'
+            'Dhii\\Machine\\StateMachineInterface',
+            $subject, 'Subject is not a valid StateMachineInterface instance.'
+        );
+        $this->assertInstanceOf(
+            'Dhii\\Machine\\CurrentStateAwareInterface',
+            $subject, 'Subject is not a valid CurrentStateAwareInterface instance.'
+        );
+        $this->assertInstanceOf(
+            'Dhii\\Machine\\StatesAwareInterface',
+            $subject, 'Subject is not a valid StatesAwareInterface instance.'
         );
     }
 }

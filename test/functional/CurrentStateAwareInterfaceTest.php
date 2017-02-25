@@ -2,29 +2,29 @@
 
 namespace Dhii\Machine\FuncTest;
 
-use \Dhii\Machine\StateMachineInterface;
+use \Dhii\Machine\CurrentStateAwareInterface;
 use \Xpmock\TestCase;
 
 /**
- * Tests {@see Dhii\Machine\StateMachineInterface}.
+ * Tests {@see Dhii\Machine\CurrentStateAwareInterface}.
  *
  * @since [*next-version*]
  */
-class StateMachineInterfaceTest extends TestCase
+class CurrentStateAwareInterfaceTest extends TestCase
 {
     /**
      * The name of the test subject.
      *
      * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'Dhii\\Machine\\StateMachineInterface';
+    const TEST_SUBJECT_CLASSNAME = 'Dhii\\Machine\\CurrentStateAwareInterface';
 
     /**
      * Creates a new instance of the test subject.
      *
      * @since [*next-version*]
      *
-     * @return StateMachineInterface
+     * @return CurrentStateAwareInterface
      */
     public function createInstance()
     {
@@ -46,9 +46,6 @@ class StateMachineInterfaceTest extends TestCase
 
         $this->assertInstanceOf(
             static::TEST_SUBJECT_CLASSNAME, $subject, 'Subject is not a valid instance.'
-        );
-        $this->assertInstanceOf(
-            'Dhii\\Machine\\CurrentStateAwareInterface', $subject, 'Subject is not a valid StateAwareInterface instance.'
         );
     }
 }

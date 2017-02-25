@@ -2,34 +2,35 @@
 
 namespace Dhii\Machine\FuncTest;
 
-use \Dhii\Machine\StateMachineInterface;
+use \Dhii\Machine\TransitionableInterface;
 use \Xpmock\TestCase;
 
 /**
- * Tests {@see Dhii\Machine\StateMachineInterface}.
+ * Tests {@see Dhii\Machine\TransitionableInterface}.
  *
  * @since [*next-version*]
  */
-class StateMachineInterfaceTest extends TestCase
+class TransitionableInterfaceTest extends TestCase
 {
     /**
      * The name of the test subject.
      *
      * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'Dhii\\Machine\\StateMachineInterface';
+    const TEST_SUBJECT_CLASSNAME = 'Dhii\\Machine\\TransitionableInterface';
 
     /**
      * Creates a new instance of the test subject.
      *
      * @since [*next-version*]
      *
-     * @return StateMachineInterface
+     * @return TransitionableInterface
      */
     public function createInstance()
     {
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
-            ->getCurrentState()
+            ->canTransition()
+            ->transition()
             ->new();
 
         return $mock;
@@ -48,7 +49,12 @@ class StateMachineInterfaceTest extends TestCase
             static::TEST_SUBJECT_CLASSNAME, $subject, 'Subject is not a valid instance.'
         );
         $this->assertInstanceOf(
-            'Dhii\\Machine\\CurrentStateAwareInterface', $subject, 'Subject is not a valid StateAwareInterface instance.'
+            'Dhii\\Machine\\TransitionCheckCapableInterface',
+            $subject, 'Subject is not a valid instance.'
+        );
+        $this->assertInstanceOf(
+            'Dhii\\Machine\\TransitionCapableInterface',
+            $subject, 'Subject is not a valid instance.'
         );
     }
 }
