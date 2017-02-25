@@ -5,7 +5,7 @@ namespace Dhii\Machine;
 use Dhii\Data\ValueAwareInterface;
 
 /**
- * Something that can check if a transition is possible.
+ * Something that can check if a transition can be applied.
  *
  * @since [*next-version*]
  */

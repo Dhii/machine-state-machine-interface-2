@@ -5,7 +5,7 @@ namespace Dhii\Machine;
 use Dhii\Data\ValueAwareInterface;
 
 /**
- * Something that can transition from one state to another.
+ * Something that can have a transition applied to change its state.
  *
  * @since [*next-version*]
  */
