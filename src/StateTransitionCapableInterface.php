@@ -19,6 +19,7 @@ interface StateTransitionCapableInterface
      * @param ValueAwareInterface $state The state to transition to.
      *
      * @throws TransitionExceptionInterface If the transition failed.
+     * @throws InvalidStateExceptionInterface If the state is invalid.
      */
     public function transitionTo(ValueAwareInterface $state);
 }
