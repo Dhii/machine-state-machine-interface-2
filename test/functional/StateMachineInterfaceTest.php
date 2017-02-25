@@ -29,9 +29,7 @@ class StateMachineInterfaceTest extends TestCase
     public function createInstance()
     {
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
-            ->getState()
-            ->transition()
-            ->getCurrentTransitions()
+            ->getCurrentState()
             ->new();
 
         return $mock;
@@ -50,10 +48,7 @@ class StateMachineInterfaceTest extends TestCase
             static::TEST_SUBJECT_CLASSNAME, $subject, 'Subject is not a valid instance.'
         );
         $this->assertInstanceOf(
-            'Dhii\\Machine\\StateAwareInterface', $subject, 'Subject is not a valid StateAwareInterface instance.'
-        );
-        $this->assertInstanceOf(
-            'Dhii\\Machine\\TransitionCapableInterface', $subject, 'Subject is not a valid TransitionCapableInterface instance.'
+            'Dhii\\Machine\\CurrentStateAwareInterface', $subject, 'Subject is not a valid StateAwareInterface instance.'
         );
     }
 }
