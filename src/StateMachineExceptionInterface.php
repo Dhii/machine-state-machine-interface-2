@@ -9,4 +9,12 @@ namespace Dhii\Machine;
  */
 interface StateMachineExceptionInterface
 {
+    /**
+     * Retrieves the machine that is triggered this exception.
+     *
+     * @since [*next-version*]
+     *
+     * @return StateMachineInterface|null The machine instance, if any.
+     */
+    public function getMachine();
 }

@@ -29,6 +29,7 @@ class StateMachineExceptionInterfaceTest extends TestCase
     public function createInstance()
     {
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
+            ->getMachine()
             ->new();
 
         return $mock;
