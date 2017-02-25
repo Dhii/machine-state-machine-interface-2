@@ -6,7 +6,7 @@ use Dhii\Data\ValueAwareInterface;
 use Traversable;
 
 /**
- * Something which has a set of states..
+ * Something which has a set of states.
  *
  * @since [*next-version*]
  */
